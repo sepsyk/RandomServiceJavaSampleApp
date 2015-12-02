@@ -7,9 +7,9 @@ services:
 
 before_install:
 - docker build -t sepsyk/reverse ./reverseDockerfile/
-- docker run -d -p 127.0.0.1:8081:8081 -—name reverse —-rm sepsyk/reverse
+- docker run -d -p 127.0.0.1:8081:8081 -—name=reverse —-rm sepsyk/reverse
 - docker build -t sepsyk/rand .
-- docker run -d -p 8080:8080 --name rand --link reverse:reverse --rm sepsyk/rand
+- docker run -d -p 8080:8080 --name=rand --link=reverse:reverse --rm sepsyk/rand
 
 script:
 - ./smoketest.sh
