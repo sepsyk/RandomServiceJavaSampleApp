@@ -22,13 +22,13 @@ public class RandUtilsTest
     
     public void testRandomLargerEqualsThanZero()
     {    	
-        Float randomNumber = RandUtils.randomize();
+        double randomNumber = RandUtils.randomize();
         assertTrue(randomNumber>=0);
     }
     
     public void testRandomSmallerEqualsThanOne()
     {    	
-        Float randomNumber = RandUtils.randomize();
+        double randomNumber = RandUtils.randomize();
         assertTrue(randomNumber<=1);
     }
 }
