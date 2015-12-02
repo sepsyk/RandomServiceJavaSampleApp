@@ -7,7 +7,7 @@ services:
 
 before_install:
 - docker build -t sepsyk/reverse ./reverseDockerfile/
-- docker run -p 127.0.0.1:8081:8081 -—name=reverse —-rm sepsyk/reverse
+- docker run -p 127.0.0.1:8081:8081 --name=reverse --rm sepsyk/reverse
 - docker build -t sepsyk/rand .
 - docker run -p 8080:8080 --name=rand --link=reverse:reverse --rm sepsyk/rand
 
