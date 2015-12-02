@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RandUtils {
 	
-	public static Float randomize(){
+	public static float randomize(){
 		Random random = new Random();
 		return random.nextFloat();
 	}
