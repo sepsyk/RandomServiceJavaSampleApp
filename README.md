@@ -10,13 +10,22 @@ Requirements:
 
 Java 7
 Maven 3
-Reverse Service: the Random service relies on another service (https://github.com/sepsyk/ReverseServiceJavaSampleApp), which is expected to run by default on localhost, port 8081. The reverse service API endpoint can be changed in src/main/webapp/WEB-INF/reverseservice.properties
+
+Reverse Service: the Random service relies on another service (https://github.com/sepsyk/ReverseServiceJavaSampleApp), which is expected to run in docker by default with service name 'reverse', linked to this apps container, listening on port 8081. The reverse service API endpoint can be changed in src/main/webapp/WEB-INF/reverseservice.properties
 
 
 Steps to run the service:
+
 1. Follow the steps on https://github.com/sepsyk/ReverseServiceJavaSampleApp to install and run Reverse service.
+
 2. Install prerequsites (Java, Maven)
+
 3. Clone the sources from Github
+
 4. Build the sources: mvn clean install
+
 5. Run the service in an embedded Jetty container: mvn jetty:run
+
 6. Post requests with the given JSON format to http://hostname:8080/api
+
+Alternatively, use the Dockerfile placed in the root to run the service in Docker.
