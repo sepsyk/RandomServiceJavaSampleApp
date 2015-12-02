@@ -15,11 +15,17 @@ Reverse Service: the Random service relies on another service (https://github.co
 
 
 Steps to run the service:
+
 1. Follow the steps on https://github.com/sepsyk/ReverseServiceJavaSampleApp to install and run Reverse service.
+
 2. Install prerequsites (Java, Maven)
+
 3. Clone the sources from Github
+
 4. Build the sources: mvn clean install
+
 5. Run the service in an embedded Jetty container: mvn jetty:run
+
 6. Post requests with the given JSON format to http://hostname:8080/api
 
 Alternatively, use the Dockerfile placed in the root to run the service in Docker.
