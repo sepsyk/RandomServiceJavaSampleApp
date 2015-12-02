@@ -2,9 +2,9 @@ package com.utils;
 
 public class RandUtils {
 	
-	public static Float randomize(){
+	public static double randomize(){
 		double random = Math.random();
-		return new Float(random);
+		return random;
 	}
 
 }
