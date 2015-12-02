@@ -12,7 +12,7 @@ RUN apt-get install openjdk-7-jdk -y
 RUN apt-get install maven -y
 #install wget for downloads
 RUN apt-get install wget -y
-#download Reverse service
+#download Random service
 RUN wget https://github.com/sepsyk/RandomServiceJavaSampleApp/archive/master.zip
 #unzip and clean up
 RUN unzip -x master.zip 
